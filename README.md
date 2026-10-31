@@ -68,22 +68,6 @@ the band and replaces whatever injury status it has, so a hand-set status lasts 
 
 None.
 
-## API
-
-```js
-game.modules.get("stef-health-overlay").api.migrateLegacy({ dryRun: true }) // see "Upgrading" below
-```
-
-## Upgrading from Injury Overlay (`injury-overlay`)
-
-1. Install this module, enable it and disable Injury Overlay.
-2. On the first load the GM's client updates the injury effects that are already on actors (world actors and unlinked
-   tokens on every scene) so their image points at this module's folder instead of `modules/injury-overlay/assets/`.
-   The status ids did not change, so existing effects keep working. The old module stored no settings or flags.
-3. To check, run `game.modules.get("stef-health-overlay").api.migrateLegacy({ dryRun: true })` in the console (F12);
-   it reports what would still change. `migrateLegacy({ force: true })` runs it again.
-4. Remove Injury Overlay.
-
 ## Known limitations
 
 - Only Draw Steel and D&D 5e are supported.
