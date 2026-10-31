@@ -1,0 +1,6 @@
+module.json
+LICENSE
+README.md
+CHANGELOG.md
+scripts
+assets

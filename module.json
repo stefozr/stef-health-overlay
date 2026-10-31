@@ -1,0 +1,40 @@
+{
+  "id": "stef-health-overlay",
+  "title": "Stef's Health Overlay",
+  "description": "Shows how hurt a creature is with a full-token injury overlay that follows its remaining Stamina (Draw Steel) or hit points (D&D 5e), in five bands from Barely Injured to Mortally Wounded. Stef's Health Overlay is not affiliated with MCDM Productions, LLC. Draw Steel is a trademark of MCDM Productions, LLC.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Stefan",
+      "url": "https://github.com/stefozr"
+    }
+  ],
+  "url": "https://github.com/stefozr/stef-health-overlay",
+  "manifest": "https://github.com/stefozr/stef-health-overlay/releases/latest/download/module.json",
+  "download": "https://github.com/stefozr/stef-health-overlay/releases/download/v1.0.0/module.zip",
+  "bugs": "https://github.com/stefozr/stef-health-overlay/issues",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.369"
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "draw-steel",
+        "type": "system",
+        "reason": "Overlays follow the creature's Stamina; heroes and retainers below 0 Stamina show Mortally Wounded."
+      },
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "reason": "Overlays follow the creature's hit points."
+      }
+    ]
+  }
+}
